@@ -368,6 +368,28 @@ DOI: 10.1523/ENEURO.0266-18.2018
 
 https://github.com/ElisaYork/3DMorph
 
+## Example Results
+
+The following figures demonstrate the main stages of the pipeline using the example `TrialControlZip.tif` image stack.
+
+### 3D Segmentation
+
+The raw microscopy data are preprocessed and segmented in three dimensions to identify microglial objects.
+
+![Segmentation pipeline](Figures/segmentation_pipeline.png)
+
+### Individual Cell Separation
+
+Following XY-border removal and soma-guided separation, the final segmented objects are represented as individual 3D cells.
+
+![Separated microglia in 3D](Figures/separated_cells_3d.png)
+
+### Morphology Classification
+
+The extracted cells are classified into Amoeboid, Activated, or Ramified morphological classes using the trained Bagged Trees classifier.
+
+![Classified microglia](Figures/classified_microglia.png)
+
 ## Requirements
 
 - MATLAB
